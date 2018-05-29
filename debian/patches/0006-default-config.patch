@@ -1,0 +1,22 @@
+From: Russell Coker <russell@coker.com.au>
+Date: Sun, 26 Feb 2012 19:39:24 +0100
+Subject: default config
+
+---
+ restorecond/restorecond.conf |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
+--- a/restorecond.conf
++++ b/restorecond.conf
+@@ -2,6 +2,11 @@
+ /etc/resolv.conf
+ /etc/samba/secrets.tdb
+ /etc/updatedb.conf
++/var/run/cups
++/var/run/dbus
++/var/run/network
++/var/run/network/ifstate
++/var/run/PolicyKit
+ /var/run/utmp
+ /var/log/wtmp
+ /root/*

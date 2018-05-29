@@ -1,0 +1,43 @@
+policycoreutils (2.4-1) experimental; urgency=medium
+
+  With this version, the main policycoreutils package has been split in
+  several different packages and new executables added:
+    - policycoreutils contains the main utilities, like semodule or
+      restorecon. This package is also now responsible of automatically
+      relabelling the filesystem on boot if needed instead of selinux-basics.
+    - policycoreutils-python-utils contains the main utilities that are
+      written in python, like semanage or audit2allow.
+    - policycoreutils-dev contains the semodules_* executables used to develop
+      the policy and the (new) sepolicy executable.
+    - restorecond contains restorecond to restore contexts of files that often
+      get the wrong context.
+    - mcstrans contains mcstransd to map a machine readable sensitivity label
+      to a human readable form.
+    - newrole contains newrole to switch roles, run_init to run /etc/init.d
+      scripts in the proper context.
+    - policycoreutils-gui contains (new) executables to graphically configure
+      or create policies. Note that these utilities are coming from Red Hat
+      and all the features might not work ATM on debian systems.
+    - policycoreutils-sandbox contains the scripts to create graphical
+      sandboxes. It requires an additional custom policy that is not present
+      in Debian.
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 19 Sep 2015 16:25:31 +0200
+
+policycoreutils (1.30.28-1) unstable; urgency=low
+
+  With this version of policycoreutils, the file /etc/selinux/config
+  shall have the variable SELINUXTYPE set to refpolicy-targeted (you may
+  also set it to be refpolicy-strict or refpolicy-src). Only 1.30.26-3
+  created the file with SELINUXTYPE set to targeted (which is
+  appropriate on Red Hat machines and not Debian). We can't
+  automatically change /etc/selinux/config (preserve user changes) since
+  /etc/selinux/targeted/policy/policy.N might be a legitimate local
+  security policy. If it is not, and if any of the files
+  /etc/selinux/refpolicy-targeted/policy/policy.N,
+  /etc/selinux/refpolicy-strict/policy/policy.N, or
+  /etc/selinux/refpolicy-src/policy/policy.N exist, please select one
+  for the SELINUXTYPE variable in /etc/selinux/config
+
+ -- Manoj Srivastava <srivasta@debian.org>  Thu,  7 Sep 2006 11:37:19 -0500
+

@@ -1,0 +1,36 @@
+Source: restorecond
+VCS-Git: https://salsa.debian.org/selinux-team/restorecond.git
+VCS-Browser: https://salsa.debian.org/selinux-team/restorecond
+Priority: optional
+Section: utils
+Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
+Uploaders: Laurent Bigonville <bigon@debian.org>,
+           Russell Coker <russell@coker.com.au>
+Standards-Version: 4.1.4
+Build-Depends: debhelper (>= 10),
+               libdbus-1-dev,
+               libdbus-glib-1-dev,
+               libglib2.0-dev,
+               libpcre3-dev,
+               libselinux1-dev (>= 2.8),
+               pkg-config
+Homepage: http://userspace.selinuxproject.org/
+
+Package: restorecond
+Architecture: linux-any
+Depends: lsb-base (>= 3.0-6), selinux-utils, ${misc:Depends}, ${shlibs:Depends}
+Breaks: policycoreutils (<< 2.4)
+Replaces: policycoreutils (<< 2.4)
+Description: SELinux core policy utilities (restorecond utilities)
+ Security-enhanced Linux is a patch of the Linux® kernel and a number
+ of utilities with enhanced security functionality designed to add
+ mandatory access controls to Linux.  The Security-enhanced Linux
+ kernel contains new architectural components originally developed to
+ improve the security of the Flask operating system. These
+ architectural components provide general support for the enforcement
+ of many kinds of mandatory access control policies, including those
+ based on the concepts of Type Enforcement®, Role-based Access Control,
+ and Multi-level Security.
+ .
+ This package contains restorecond to restore contexts of files that often get
+ the wrong context.

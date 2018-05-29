@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+#
+#  # Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+export INITDIR=$${DESTDIR}/etc/init.d
+export SYSTEMDDIR=/lib/systemd
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# The build system doesn't use CPPFLAGS, pass them to CFLAGS to enable the
+# missing (hardening) flags. dpkg_buildflags is necessary because $(shell ..)
+# doesn't use local environment variables.
+dpkg_buildflags = DEB_BUILD_MAINT_OPTIONS=$(DEB_BUILD_MAINT_OPTIONS) dpkg-buildflags
+export DEB_CFLAGS_MAINT_APPEND = $(shell $(dpkg_buildflags) --get CPPFLAGS)
+
+%:
+	dh $@ --with systemd
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp
+
+override_dh_missing:
+	dh_missing --list-missing

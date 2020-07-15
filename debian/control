@@ -3,8 +3,9 @@ VCS-Git: https://salsa.debian.org/selinux-team/restorecond.git
 VCS-Browser: https://salsa.debian.org/selinux-team/restorecond
 Priority: optional
 Section: utils
-Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
-Uploaders: Laurent Bigonville <bigon@debian.org>,
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
+XSBC-Pexip-Original-Uploaders: Laurent Bigonville <bigon@debian.org>,
            Russell Coker <russell@coker.com.au>
 Standards-Version: 4.1.4
 Build-Depends: debhelper (>= 10),
@@ -15,6 +16,7 @@ Build-Depends: debhelper (>= 10),
                libselinux1-dev (>= 2.8),
                pkg-config
 Homepage: http://userspace.selinuxproject.org/
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
 
 Package: restorecond
 Architecture: linux-any

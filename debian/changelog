@@ -1,3 +1,9 @@
+restorecond (2.8-1pexip1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+
+ -- Vincent Sanders <vince@pexip.com>  Wed, 15 Jul 2020 11:37:35 +0000
+
 restorecond (2.8-1) unstable; urgency=medium
 
   * New upstream release

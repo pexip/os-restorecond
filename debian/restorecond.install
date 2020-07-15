@@ -2,6 +2,8 @@ etc/selinux/restorecond.conf
 etc/selinux/restorecond_user.conf
 etc/xdg/autostart/restorecond.desktop
 lib/systemd/system/restorecond.service
+usr/lib/systemd/user/restorecond_user.service
 usr/sbin/restorecond
 usr/share/dbus-1/services/org.selinux.Restorecond.service
 usr/share/man/man8/restorecond.8*
+usr/share/man/ru/man8/restorecond.8

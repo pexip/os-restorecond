@@ -16,7 +16,7 @@ Build-Depends: debhelper (>= 10),
                libselinux1-dev (>= 2.8),
                pkg-config
 Homepage: http://userspace.selinuxproject.org/
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
 
 Package: restorecond
 Architecture: linux-any

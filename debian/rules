@@ -6,7 +6,8 @@
 
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 export INITDIR=$${DESTDIR}/etc/init.d
-export SYSTEMDDIR=/lib/systemd
+export SYSTEMDSYSTEMUNITDIR=/lib/systemd/system
+export SYSTEMDUSERUNITDIR=/usr/lib/systemd/user
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
@@ -17,10 +18,7 @@ dpkg_buildflags = DEB_BUILD_MAINT_OPTIONS=$(DEB_BUILD_MAINT_OPTIONS) dpkg-buildf
 export DEB_CFLAGS_MAINT_APPEND = $(shell $(dpkg_buildflags) --get CPPFLAGS)
 
 %:
-	dh $@ --with systemd
+	dh $@
 
 override_dh_auto_install:
 	dh_auto_install --destdir=debian/tmp
-
-override_dh_missing:
-	dh_missing --list-missing

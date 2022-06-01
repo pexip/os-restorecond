@@ -7,20 +7,19 @@ Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 XSBC-Pexip-Original-Uploaders: Laurent Bigonville <bigon@debian.org>,
            Russell Coker <russell@coker.com.au>
-Standards-Version: 4.1.4
-Build-Depends: debhelper (>= 10),
-               libdbus-1-dev,
-               libdbus-glib-1-dev,
+Standards-Version: 4.5.0
+Build-Depends: debhelper (>= 12),
                libglib2.0-dev,
-               libpcre3-dev,
-               libselinux1-dev (>= 2.8),
+               libselinux1-dev (>= 3.1),
                pkg-config
 Homepage: http://userspace.selinuxproject.org/
+Rules-Requires-Root: no
 XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
 
 Package: restorecond
 Architecture: linux-any
 Depends: lsb-base (>= 3.0-6), selinux-utils, ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
 Breaks: policycoreutils (<< 2.4)
 Replaces: policycoreutils (<< 2.4)
 Description: SELinux core policy utilities (restorecond utilities)

@@ -1,3 +1,47 @@
+restorecond (3.1-1) unstable; urgency=medium
+
+  * New upstream release
+    - debian/control: Bump {build-}dependencies to match the new release
+    - debian/control: Drop libdbus-1-dev and libdbus-glib-1-dev, restorecond
+      now uses GDBus (Closes: #955940)
+  * debian/control: Set Rules-Requires-Root: no
+  * debian/rules: Update systemd unit directories path
+  * debian/restorecond.install: Install the systemd user service file
+  * debian/control: Bump Standards-Version to 4.5.0 (no further changes)
+
+ -- Laurent Bigonville <bigon@debian.org>  Wed, 15 Jul 2020 09:48:11 +0200
+
+restorecond (3.0-1) unstable; urgency=medium
+
+  * New upstream release
+    - debian/control: Bump {build-}dependencies to match the new release
+    - Refresh d/p/0006-default-config.patch and drop d/p/nolink_pcre.patch and
+      d/p/pidfile_location.patch, both applied upstream
+  * debian/control: Bump Standards-Version to 4.4.1 (no further changes)
+  * Bump debhelper compatibility to 12, stop overriding dh_missing and stop
+    calling the systemd sequence and add Pre-Depends: ${misc:Pre-Depends}
+
+ -- Laurent Bigonville <bigon@debian.org>  Thu, 12 Dec 2019 11:06:43 +0100
+
+restorecond (2.9-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 08 Jul 2019 09:13:55 +0200
+
+restorecond (2.9-1) experimental; urgency=medium
+
+  * New upstream release
+    - debian/control: Bump {build-}dependencies to match the new release
+  * debian/watch: Adjust the URL
+  * debian/control: Bump Standards-Version to 4.3.0 (no further changes)
+  * debian/patches/nolink_pcre.patch: Stop linking against PCRE
+  * debian/restorecond.install: Install manpages in Russian
+  * debian/patches/pidfile_location.patch: Move the pidfile from /var/run to
+    /run to please systemd and lintian
+
+ -- Laurent Bigonville <bigon@debian.org>  Wed, 27 Mar 2019 15:42:45 +0100
+
 restorecond (2.8-1pexip1) pexip; urgency=medium
 
   * Prepare Pexip packaging

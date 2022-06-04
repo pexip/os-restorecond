@@ -1,25 +1,23 @@
 Source: restorecond
-VCS-Git: https://salsa.debian.org/selinux-team/restorecond.git
-VCS-Browser: https://salsa.debian.org/selinux-team/restorecond
+Vcs-Git: https://salsa.debian.org/selinux-team/restorecond.git
+Vcs-Browser: https://salsa.debian.org/selinux-team/restorecond
 Priority: optional
 Section: utils
 Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Uploaders: Laurent Bigonville <bigon@debian.org>,
            Russell Coker <russell@coker.com.au>
-Standards-Version: 4.5.0
-Build-Depends: debhelper (>= 12),
+Standards-Version: 4.6.0
+Build-Depends: debhelper-compat (= 13),
                libglib2.0-dev,
-               libselinux1-dev (>= 3.1),
+               libselinux1-dev (>= 3.4),
                pkg-config
-Homepage: http://userspace.selinuxproject.org/
+Homepage: https://selinuxproject.org
 Rules-Requires-Root: no
 
 Package: restorecond
 Architecture: linux-any
 Depends: lsb-base (>= 3.0-6), selinux-utils, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
-Breaks: policycoreutils (<< 2.4)
-Replaces: policycoreutils (<< 2.4)
 Description: SELinux core policy utilities (restorecond utilities)
  Security-enhanced Linux is a patch of the Linux® kernel and a number
  of utilities with enhanced security functionality designed to add

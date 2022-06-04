@@ -1,3 +1,37 @@
+restorecond (3.4-1) unstable; urgency=medium
+
+  * New upstream release
+    - debian/control: Bump build-dependencies to match the new release
+  * Enable GPG key validation of the upstream tarball
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 04 Jun 2022 14:52:06 +0200
+
+restorecond (3.3-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Christian Göttsche ]
+  * d/gitlab-ci.yml: Use Debian recipe
+  * d/control: Bump debhelper compat to level 13
+  * d/control: Bump Standards-Version to 4.5.1 (no further changes)
+  * d/control: Update homepage
+  * d/rules: Enable -Wall -Wextra
+  * d/control: Convert cute fields
+  * d/patches/default-config: Declare forwarded as not-needed
+
+  [ Laurent Bigonville ]
+  * debian/watch: Update the URL to follow the new tagging format
+  * New upstream version 3.3
+    - debian/control: Bump build-dependencies to match the new release
+  * debian/control: Drop ancient Breaks/Replaces
+  * debian/control: Bump Standards-Version to 4.6.0 (no further changes)
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 08 Nov 2021 12:46:08 +0100
+
 restorecond (3.1-1) unstable; urgency=medium
 
   * New upstream release
@@ -76,7 +110,7 @@ restorecond (2.7~rc3-1) experimental; urgency=medium
       split in smaller components
     - debian/control: Bump {build-}dependencies to match the new release
   * debian/watch: Add support for rc releases and use macros
-  * debian/control: Bump Standards-Version to 4.0.0 (no further changes) 
+  * debian/control: Bump Standards-Version to 4.0.0 (no further changes)
   * debian/control: Add pkg-config to the build-dependencies
 
  -- Laurent Bigonville <bigon@debian.org>  Sat, 24 Jun 2017 14:37:35 +0200
@@ -556,7 +590,7 @@ policycoreutils (2.0.74-1) unstable; urgency=low
     when installing a watch on utmp.
   * [863fb62]: topic--debian: Improve error messages on forkpty failure
     The current error message when forkpty() fails is not clear or
-    useful. The following patch makes indicate what went wrong. 
+    useful. The following patch makes indicate what went wrong.
     Bug fix: "The error message on forkpty() failure is not clear or
     useful.", thanks to Russell Coker              (Closes: #515710).
 
@@ -565,7 +599,7 @@ policycoreutils (2.0.74-1) unstable; urgency=low
 policycoreutils (2.0.72-4) UNRELEASED; urgency=low
 
   * [d42e245]: [topic--restorecond-init-script]: Add to watched files
-    list 
+    list
 
  -- Manoj Srivastava <srivasta@debian.org>  Mon, 14 Sep 2009 08:31:48 -0500
 
@@ -573,7 +607,7 @@ policycoreutils (2.0.72-3) UNRELEASED; urgency=low
 
   * [863fb62]: topic--debian: Improve error messages on forkpty failure
     The current error message when forkpty() fails is not clear or
-    useful. The following patch makes indicate what went wrong. 
+    useful. The following patch makes indicate what went wrong.
     Bug fix: "The error message on forkpty() failure is not clear or
     useful.", thanks to Russell Coker              (Closes: #515710).
 

@@ -14,7 +14,7 @@ Build-Depends: debhelper (>= 12),
                pkg-config
 Homepage: http://userspace.selinuxproject.org/
 Rules-Requires-Root: no
-XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: restorecond
 Architecture: linux-any

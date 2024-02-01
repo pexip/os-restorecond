@@ -1,3 +1,9 @@
+restorecond (3.4-1+pexip24u3) pexip-bookworm; urgency=medium
+
+  * New versioning scheme
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 01 Feb 2024 16:28:42 +0000
+
 restorecond (3.4-1pexip2) pexip-bookworm; urgency=medium
 
   * Bookworm build for product distribution

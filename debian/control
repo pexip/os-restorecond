@@ -6,17 +6,17 @@ Section: utils
 Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Uploaders: Laurent Bigonville <bigon@debian.org>,
            Russell Coker <russell@coker.com.au>
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Build-Depends: debhelper-compat (= 13),
                libglib2.0-dev,
-               libselinux1-dev (>= 3.4),
-               pkg-config
+               libselinux1-dev (>= 3.8.1),
+               pkgconf
 Homepage: https://selinuxproject.org
 Rules-Requires-Root: no
 
 Package: restorecond
 Architecture: linux-any
-Depends: lsb-base (>= 3.0-6), selinux-utils, ${misc:Depends}, ${shlibs:Depends}
+Depends: selinux-utils, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
 Description: SELinux core policy utilities (restorecond utilities)
  Security-enhanced Linux is a patch of the Linux® kernel and a number

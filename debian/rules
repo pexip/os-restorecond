@@ -6,7 +6,7 @@
 
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 export INITDIR=/etc/init.d
-export SYSTEMDSYSTEMUNITDIR=/lib/systemd/system
+export SYSTEMDSYSTEMUNITDIR=/usr/lib/systemd/system
 export SYSTEMDUSERUNITDIR=/usr/lib/systemd/user
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all

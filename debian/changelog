@@ -1,3 +1,42 @@
+restorecond (3.8.1-1) unstable; urgency=medium
+
+  * New upstream release, just change version number
+
+ -- Russell Coker <russell@coker.com.au>  Sun, 16 Mar 2025 18:23:26 +1100
+
+restorecond (3.8-1) unstable; urgency=medium
+
+  * new upstream release
+
+ -- Russell Coker <russell@coker.com.au>  Thu, 06 Feb 2025 22:28:02 +1100
+
+restorecond (3.7-1) unstable; urgency=medium
+
+  * New upstream release
+  * Added new upstream signing key
+  * Removed config for Russian man page
+  * Added /run/resolvconf/resolv.conf to config Closes: #769803
+
+ -- Russell Coker <russell@coker.com.au>  Mon, 02 Sep 2024 21:36:14 +1000
+
+restorecond (3.5-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Move aliased files from / to /usr (DEP17). (Closes: #1073776)
+  * Replace Build-Depends on obsolete pkg-config with pkgconf
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 15 Aug 2024 08:40:33 +0200
+
+restorecond (3.5-1) unstable; urgency=medium
+
+  * New upstream release
+    - debian/control: Bump build-dependencies to match the new release
+  * debian/upstream/signing-key.asc: Add public key of Jason Zaman
+  * debian/control: Bump Standards-Version to 4.6.2 (no further changes)
+  * debian/control: Drop lsb-base from the dependencies, to please lintian
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 10 Jul 2023 21:12:48 +0200
+
 restorecond (3.4-1) unstable; urgency=medium
 
   * New upstream release
